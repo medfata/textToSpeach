@@ -12,3 +12,10 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `npx cdk deploy`  deploy this stack to your default AWS account/region
 * `npx cdk diff`    compare deployed stack with current state
 * `npx cdk synth`   emits the synthesized CloudFormation template
+
+# Project Architicture
+
+this is a serverless backend that takes a text or pdf file and returns a mp3 file
+
+we will have an Api gateway +> s3 bucket +> sqs queue +> lambda function +> polly +> s3 bucket +> sns topic +> api gateway:
+![text to speach arch](images/text_to_speach.png)
